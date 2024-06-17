@@ -8,7 +8,7 @@ resource "aws_ec2_instance_state" "existing_instance" {
   instance_id = data.aws_instance.existing_instance.id
   state       = "stopped"
   provisioner "local-exec" {
-    command = "echo Instance started."
+    command = "echo Instance stopped."
   }
 }
 output "instance_state" {
